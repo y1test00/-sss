@@ -1,0 +1,310 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+<style>
+#tn-lp, #tn-lp * { box-sizing: border-box; margin: 0; padding: 0; }
+#tn-lp { font-family: 'Noto Sans JP', sans-serif; color: #3D3D3D; background: #FAFBFF; line-height: 1.8; width: 100%; }
+
+/* ヘッダー */
+#tn-lp .tn-header { background: #fff; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+#tn-lp .tn-logo { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 1.2rem; color: #5B8FD6; letter-spacing: 0.04em; }
+#tn-lp .tn-logo span { color: #FF8B5E; }
+
+/* ボタン */
+#tn-lp .tn-btn { display: inline-block; background: linear-gradient(135deg, #FF8B5E 0%, #FF6B35 100%); color: #fff !important; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; font-size: 1.05rem; padding: 16px 40px; border-radius: 50px; text-decoration: none !important; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 18px rgba(255,139,94,0.4); border: none; cursor: pointer; }
+#tn-lp .tn-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,139,94,0.5); }
+#tn-lp .tn-btn-sm { font-size: 0.82rem !important; padding: 9px 18px !important; }
+#tn-lp .tn-btn-lg { font-size: 1.1rem !important; padding: 18px 48px !important; }
+#tn-lp .tn-btn-white { display: inline-block; background: #fff; color: #5B8FD6 !important; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; font-size: 1rem; padding: 16px 36px; border-radius: 50px; text-decoration: none !important; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 18px rgba(0,0,0,0.15); }
+#tn-lp .tn-btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+#tn-lp .tn-free-tag { display: inline-flex; align-items: center; gap: 6px; color: #5BC8A0; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; font-size: 0.9rem; }
+#tn-lp .tn-free-tag::before { content: '✓'; }
+
+/* セクション共通 */
+#tn-lp .tn-sec { padding: 72px 24px; width: 100%; }
+#tn-lp .tn-inner { max-width: 860px; margin: 0 auto; }
+#tn-lp .tn-label { display: inline-block; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.12em; color: #5B8FD6; background: #EBF2FF; padding: 4px 14px; border-radius: 50px; margin-bottom: 10px; }
+#tn-lp .tn-title { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(1.4rem, 4vw, 2rem); line-height: 1.45; margin-bottom: 12px; color: #3D3D3D; }
+#tn-lp .tn-desc { color: #777; font-size: 0.95rem; max-width: 560px; margin-bottom: 40px; }
+#tn-lp .tn-center { text-align: center; }
+#tn-lp .tn-center .tn-desc { margin-left: auto; margin-right: auto; }
+
+/* ヒーロー */
+#tn-lp .tn-hero { background: linear-gradient(160deg, #EBF2FF 0%, #FFF0EA 100%); padding: 72px 24px 80px; text-align: center; position: relative; overflow: hidden; }
+#tn-lp .tn-hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(91,143,214,0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+#tn-lp .tn-hero::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(255,139,94,0.12) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+#tn-lp .tn-badge { display: inline-block; background: #FFF0EA; color: #FF8B5E; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; font-size: 0.85rem; padding: 6px 18px; border-radius: 50px; margin-bottom: 20px; border: 1.5px solid rgba(255,139,94,0.3); }
+#tn-lp .tn-hero h1 { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.4; color: #3D3D3D; margin-bottom: 16px; }
+#tn-lp .tn-hero h1 .hl { color: #5B8FD6; background: linear-gradient(transparent 60%, rgba(91,143,214,0.2) 60%); }
+#tn-lp .tn-hero-sub { font-size: clamp(0.95rem, 2.5vw, 1.1rem); color: #777; max-width: 520px; margin: 0 auto 32px; }
+#tn-lp .tn-hero-sub strong { color: #3D3D3D; }
+#tn-lp .tn-illust { width: min(480px, 90%); margin: 0 auto 36px; background: #fff; border-radius: 24px; box-shadow: 0 6px 24px rgba(91,143,214,0.12); padding: 32px 24px; display: flex; flex-direction: column; align-items: center; }
+#tn-lp .tn-bubbles { width: 100%; display: flex; flex-direction: column; gap: 12px; }
+#tn-lp .tn-bubble { max-width: 80%; padding: 12px 18px; border-radius: 18px; font-size: 0.9rem; line-height: 1.6; }
+#tn-lp .tn-bubble.l { background: #EBF2FF; color: #5B8FD6; align-self: flex-start; border-bottom-left-radius: 4px; }
+#tn-lp .tn-bubble.r { background: #FFF0EA; color: #C05A3A; align-self: flex-end; border-bottom-right-radius: 4px; }
+#tn-lp .tn-cta-group { display: flex; flex-direction: column; gap: 14px; align-items: center; }
+
+/* お悩み */
+#tn-lp .tn-problems { background: #fff; }
+#tn-lp .tn-pgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+#tn-lp .tn-pcard { background: #FFF8F5; border: 1.5px solid rgba(255,139,94,0.2); border-radius: 18px; padding: 24px 20px; display: flex; align-items: flex-start; gap: 14px; }
+#tn-lp .tn-picon { font-size: 1.6rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+#tn-lp .tn-ptext { font-size: 0.92rem; line-height: 1.6; font-weight: 500; color: #3D3D3D; }
+
+/* サービス紹介 */
+#tn-lp .tn-about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+#tn-lp .tn-about-vis { background: linear-gradient(135deg, #EBF2FF 0%, #FFF0EA 100%); border-radius: 24px; padding: 40px 32px; text-align: center; }
+#tn-lp .tn-big-emoji { font-size: 5rem; display: block; margin-bottom: 12px; }
+#tn-lp .tn-about-vis p { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; font-size: 1rem; color: #5B8FD6; }
+#tn-lp .tn-points { display: flex; flex-direction: column; gap: 16px; }
+#tn-lp .tn-point { display: flex; align-items: flex-start; gap: 14px; background: #FAFBFF; padding: 16px 18px; border-radius: 14px; }
+#tn-lp .tn-pnum { background: #5B8FD6; color: #fff; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 0.85rem; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+#tn-lp .tn-pbody strong { display: block; font-size: 0.95rem; margin-bottom: 2px; color: #3D3D3D; }
+#tn-lp .tn-pbody span { font-size: 0.85rem; color: #777; }
+
+/* 特徴 */
+#tn-lp .tn-features { background: #EBF2FF; }
+#tn-lp .tn-fgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+#tn-lp .tn-fcard { background: #fff; border-radius: 18px; padding: 28px 24px; box-shadow: 0 6px 24px rgba(91,143,214,0.12); transition: transform 0.2s; }
+#tn-lp .tn-fcard:hover { transform: translateY(-4px); }
+#tn-lp .tn-femoji { font-size: 2.2rem; display: block; margin-bottom: 12px; }
+#tn-lp .tn-ftitle { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 8px; color: #5B8FD6; }
+#tn-lp .tn-fdesc { font-size: 0.88rem; color: #777; line-height: 1.7; }
+
+/* こんな方に */
+#tn-lp .tn-forwho { background: #fff; }
+#tn-lp .tn-wlist { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+#tn-lp .tn-witem { background: #EDFAF4; border-left: 4px solid #5BC8A0; border-radius: 0 14px 14px 0; padding: 16px 20px; display: flex; align-items: center; gap: 12px; font-size: 0.92rem; font-weight: 500; color: #3D3D3D; }
+#tn-lp .tn-witem::before { content: '✓'; color: #5BC8A0; font-weight: 800; font-size: 1rem; flex-shrink: 0; }
+
+/* 参加方法 */
+#tn-lp .tn-how { background: #FFFBEE; }
+#tn-lp .tn-steps { display: flex; flex-direction: column; position: relative; }
+#tn-lp .tn-steps::before { content: ''; position: absolute; left: 28px; top: 36px; bottom: 36px; width: 2px; background: repeating-linear-gradient(to bottom, #FFD166 0, #FFD166 8px, transparent 8px, transparent 16px); }
+#tn-lp .tn-step { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; }
+#tn-lp .tn-snum { background: #FFD166; color: #3D3D3D; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 1rem; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; box-shadow: 0 4px 12px rgba(255,209,102,0.5); }
+#tn-lp .tn-sbody strong { display: block; font-size: 1rem; margin-bottom: 4px; color: #3D3D3D; }
+#tn-lp .tn-sbody p { font-size: 0.88rem; color: #777; }
+
+/* 開催情報 */
+#tn-lp .tn-schedule { background: #fff; }
+#tn-lp .tn-scard { background: linear-gradient(135deg, #5B8FD6 0%, #3A6EC4 100%); color: #fff; border-radius: 24px; padding: 40px 36px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between; box-shadow: 0 10px 40px rgba(91,143,214,0.3); }
+#tn-lp .tn-scard h3 { font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; color: #fff; }
+#tn-lp .tn-sdetail { display: flex; flex-direction: column; gap: 8px; }
+#tn-lp .tn-sitem { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; opacity: 0.9; color: #fff; }
+#tn-lp .tn-stag { background: rgba(255,255,255,0.2); padding: 2px 10px; border-radius: 50px; font-size: 0.8rem; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 700; }
+#tn-lp .tn-sfree { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 1.8rem; margin-bottom: 16px; color: #fff; text-align: center; }
+#tn-lp .tn-sfree span { display: block; font-size: 0.85rem; font-weight: 400; opacity: 0.8; margin-bottom: 4px; }
+
+/* FAQ */
+#tn-lp .tn-faq { background: #FAFBFF; }
+#tn-lp .tn-flist { display: flex; flex-direction: column; gap: 14px; }
+#tn-lp .tn-fitem { background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+#tn-lp .tn-fq { display: flex; align-items: flex-start; gap: 14px; padding: 20px 24px; font-weight: 700; font-size: 0.95rem; color: #3D3D3D; }
+#tn-lp .tn-fq::before { content: 'Q'; background: #5B8FD6; color: #fff; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 0.85rem; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+#tn-lp .tn-fa { padding: 0 24px 20px 64px; font-size: 0.9rem; color: #777; line-height: 1.8; }
+
+/* 最終CTA */
+#tn-lp .tn-finalcta { background: linear-gradient(160deg, #EBF2FF 0%, #FFF0EA 100%); text-align: center; padding: 80px 24px; }
+#tn-lp .tn-finalcta h2 { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 4vw, 2.2rem); line-height: 1.45; margin-bottom: 16px; color: #3D3D3D; }
+#tn-lp .tn-finalcta p { color: #777; font-size: 0.95rem; max-width: 480px; margin: 0 auto 36px; }
+
+/* フッター */
+#tn-lp .tn-footer { background: #3D3D3D; color: rgba(255,255,255,0.7); text-align: center; padding: 32px 24px; font-size: 0.82rem; }
+#tn-lp .tn-footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+#tn-lp .tn-footer p { margin-bottom: 8px; }
+
+/* レスポンシブ */
+@media (max-width: 640px) {
+  #tn-lp .tn-about-wrap { grid-template-columns: 1fr; }
+  #tn-lp .tn-about-vis { padding: 28px 20px; }
+  #tn-lp .tn-scard { padding: 28px 22px; }
+  #tn-lp .tn-steps::before { left: 24px; }
+  #tn-lp .tn-snum { width: 48px; height: 48px; font-size: 0.9rem; }
+}
+</style>
+
+<div id="tn-lp">
+
+<!-- ヘッダー -->
+<div class="tn-header">
+  <div class="tn-logo">ツギノテ<span>作戦</span></div>
+  <a href="https://lin.ee/example" class="tn-btn tn-btn-sm">無料で参加する →</a>
+</div>
+
+<!-- ヒーロー -->
+<div class="tn-hero tn-sec">
+  <div class="tn-inner">
+    <div class="tn-badge">✨ 完全無料・毎週水曜開催</div>
+    <h1>「次に何をすればいい？」<br>その答えを<span class="hl">一緒に</span>見つけよう。</h1>
+    <p class="tn-hero-sub">
+      WEB・SNS集客で伸び悩んでいるあなたへ。<br>
+      会話を通して、あなただけの「次の一手」を見つける<br>
+      <strong>無料Q&Aコミュニティ</strong>です。
+    </p>
+    <div class="tn-illust">
+      <div class="tn-bubbles">
+        <div class="tn-bubble l">SNSを頑張ってるけど<br>フォロワーが増えなくて…😢</div>
+        <div class="tn-bubble r">どんな投稿をしてますか？<br>一緒に考えてみましょう！</div>
+        <div class="tn-bubble l">初歩的な質問でも大丈夫ですか？</div>
+        <div class="tn-bubble r">もちろん！どんな質問も大歓迎です🙌</div>
+      </div>
+    </div>
+    <div class="tn-cta-group">
+      <a href="https://lin.ee/example" class="tn-btn">LINE登録で無料参加 →</a>
+      <span class="tn-free-tag">参加費・登録費 すべて無料</span>
+    </div>
+  </div>
+</div>
+
+<!-- お悩み -->
+<div class="tn-problems tn-sec">
+  <div class="tn-inner">
+    <div class="tn-center">
+      <span class="tn-label">こんなお悩みありませんか？</span>
+      <h2 class="tn-title">あなたひとりで<br>抱え込んでいませんか？</h2>
+      <p class="tn-desc">WEB・SNS集客をはじめたものの、こんな気持ちになったことはありませんか？</p>
+    </div>
+    <div class="tn-pgrid">
+      <div class="tn-pcard"><div class="tn-picon">😔</div><p class="tn-ptext">頑張っているのに<br>なかなか結果が出ない</p></div>
+      <div class="tn-pcard"><div class="tn-picon">🤔</div><p class="tn-ptext">次に何をすればいいか<br>分からなくなった</p></div>
+      <div class="tn-pcard"><div class="tn-picon">😅</div><p class="tn-ptext">初歩的な質問を<br>する場所がない</p></div>
+      <div class="tn-pcard"><div class="tn-picon">😰</div><p class="tn-ptext">ひとりで考えすぎて<br>行き詰まってしまう</p></div>
+      <div class="tn-pcard"><div class="tn-picon">🙁</div><p class="tn-ptext">同じ悩みを持つ人と<br>つながれていない</p></div>
+      <div class="tn-pcard"><div class="tn-picon">😵</div><p class="tn-ptext">情報が多すぎて<br>何が正解か分からない</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- サービス紹介 -->
+<div class="tn-sec">
+  <div class="tn-inner">
+    <div class="tn-about-wrap">
+      <div class="tn-about-vis">
+        <span class="tn-big-emoji">🗺️</span>
+        <p>「次の一手」を<br>一緒に見つける<br>作戦会議の場</p>
+      </div>
+      <div>
+        <span class="tn-label">ツギノテ作戦とは</span>
+        <h2 class="tn-title">答えを「教わる」のではなく<br>一緒に「見つける」場所</h2>
+        <p class="tn-desc" style="margin-bottom:24px;">一方的に正解を押しつけるのではなく、あなたの状況に合わせた対話を通じて、自分だけの答えを引き出します。</p>
+        <div class="tn-points">
+          <div class="tn-point"><div class="tn-pnum">1</div><div class="tn-pbody"><strong>気軽に質問できる</strong><span>初歩的な質問も大歓迎。安心して話せる雰囲気です</span></div></div>
+          <div class="tn-point"><div class="tn-pnum">2</div><div class="tn-pbody"><strong>会話しながら思考を整理</strong><span>話しながら自分の考えがクリアになっていきます</span></div></div>
+          <div class="tn-point"><div class="tn-pnum">3</div><div class="tn-pbody"><strong>仲間とつながれる</strong><span>同じ立場の参加者とネットワークが生まれます</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 特徴 -->
+<div class="tn-features tn-sec">
+  <div class="tn-inner">
+    <div class="tn-center">
+      <span class="tn-label">特徴</span>
+      <h2 class="tn-title">ツギノテ作戦が<br>選ばれる4つの理由</h2>
+      <p class="tn-desc">参加しやすくて、続けやすい。そんな場所を大切にしています。</p>
+    </div>
+    <div class="tn-fgrid">
+      <div class="tn-fcard"><span class="tn-femoji">💬</span><div class="tn-ftitle">双方向の対話</div><p class="tn-fdesc">一方的な講義ではなく、あなたの状況に合わせた質問＆会話形式で進みます。</p></div>
+      <div class="tn-fcard"><span class="tn-femoji">🆓</span><div class="tn-ftitle">完全無料</div><p class="tn-fdesc">参加費・登録費は一切かかりません。気軽に試してみてください。</p></div>
+      <div class="tn-fcard"><span class="tn-femoji">📼</span><div class="tn-ftitle">アーカイブ視聴OK</div><p class="tn-fdesc">リアルタイムで参加できなくても大丈夫。後からでもしっかり学べます。</p></div>
+      <div class="tn-fcard"><span class="tn-femoji">🤝</span><div class="tn-ftitle">仲間づくり</div><p class="tn-fdesc">同じ悩みを持つ参加者と出会える場。学びながらつながれます。</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- こんな方に -->
+<div class="tn-forwho tn-sec">
+  <div class="tn-inner">
+    <span class="tn-label">こんな方におすすめ</span>
+    <h2 class="tn-title">あなたにも当てはまりますか？</h2>
+    <p class="tn-desc" style="margin-bottom:28px;">以下に当てはまる方は、ぜひ気軽に参加してみてください！</p>
+    <div class="tn-wlist">
+      <div class="tn-witem">WEB・SNS集客をはじめたばかりの方</div>
+      <div class="tn-witem">集客に取り組んでいるが伸び悩んでいる方</div>
+      <div class="tn-witem">次に何をすべきか迷っている方</div>
+      <div class="tn-witem">ひとりで考えるのが苦手な方</div>
+      <div class="tn-witem">初歩的な質問もしたい方</div>
+      <div class="tn-witem">同じ悩みを持つ仲間とつながりたい方</div>
+    </div>
+  </div>
+</div>
+
+<!-- 参加方法 -->
+<div class="tn-how tn-sec">
+  <div class="tn-inner">
+    <div class="tn-center">
+      <span class="tn-label">参加方法</span>
+      <h2 class="tn-title">たった3ステップで<br>参加できます</h2>
+      <p class="tn-desc" style="margin-bottom:36px;">難しい手続きは一切なし。すぐに始められます。</p>
+    </div>
+    <div class="tn-steps">
+      <div class="tn-step"><div class="tn-snum">01</div><div class="tn-sbody"><strong>LINEを登録する</strong><p>下のボタンからLINE公式アカウントを友だち追加。30秒で完了します。</p></div></div>
+      <div class="tn-step"><div class="tn-snum">02</div><div class="tn-sbody"><strong>開催案内を受け取る</strong><p>毎週水曜日の開催情報がLINEで届きます。リマインドも届くので忘れません。</p></div></div>
+      <div class="tn-step"><div class="tn-snum">03</div><div class="tn-sbody"><strong>当日参加するだけ！</strong><p>URLをタップしてオンラインで参加。カメラオフでもOK。参加しやすいスタイルで。</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 開催情報 -->
+<div class="tn-schedule tn-sec">
+  <div class="tn-inner">
+    <div class="tn-scard">
+      <div class="tn-sinfo">
+        <h3>開催スケジュール</h3>
+        <div class="tn-sdetail">
+          <div class="tn-sitem"><span class="tn-stag">日時</span>毎週水曜日 開催</div>
+          <div class="tn-sitem"><span class="tn-stag">形式</span>オンライン（Zoom等）</div>
+          <div class="tn-sitem"><span class="tn-stag">アーカイブ</span>後日視聴可能</div>
+          <div class="tn-sitem"><span class="tn-stag">参加費</span>無料</div>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <div class="tn-sfree"><span>参加費</span>完全無料</div>
+        <a href="https://lin.ee/example" class="tn-btn-white">LINEで無料登録 →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="tn-faq tn-sec">
+  <div class="tn-inner">
+    <div class="tn-center">
+      <span class="tn-label">よくある質問</span>
+      <h2 class="tn-title">気になることを<br>解消しましょう</h2>
+      <p class="tn-desc" style="margin-bottom:36px;">参加前の疑問をまとめました。</p>
+    </div>
+    <div class="tn-flist">
+      <div class="tn-fitem"><div class="tn-fq">本当に無料ですか？後から料金が発生したりしませんか？</div><div class="tn-fa">はい、完全無料です。参加費・登録費はいただいておりません。後から急に費用が発生することもありませんのでご安心ください。</div></div>
+      <div class="tn-fitem"><div class="tn-fq">初心者でも参加できますか？</div><div class="tn-fa">もちろんです！むしろ初心者の方を歓迎しています。「こんな初歩的な質問していいの？」という心配は不要です。どんな質問もお気軽にどうぞ。</div></div>
+      <div class="tn-fitem"><div class="tn-fq">リアルタイムで参加できない時はどうなりますか？</div><div class="tn-fa">アーカイブ動画でご視聴いただけます。お仕事や予定が重なっても、あとからしっかりキャッチアップできるのでご安心ください。</div></div>
+      <div class="tn-fitem"><div class="tn-fq">どんなツールを使って開催されますか？</div><div class="tn-fa">オンライン会議ツール（Zoom等）を使用します。参加URLはLINE公式アカウント経由でお知らせします。</div></div>
+      <div class="tn-fitem"><div class="tn-fq">参加後に勧誘や高額商品の営業はありますか？</div><div class="tn-fa">しつこい勧誘や高額商品の営業は一切しておりません。安心して参加いただける場を大切にしています。</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 最終CTA -->
+<div class="tn-finalcta">
+  <div class="tn-inner">
+    <h2>まずは気軽に<br>参加してみませんか？ 🙌</h2>
+    <p>難しく考えなくて大丈夫。<br>あなたのペースで、一歩ずつ前に進みましょう。<br>「次の一手」を一緒に見つけましょう。</p>
+    <div class="tn-cta-group">
+      <a href="https://lin.ee/example" class="tn-btn tn-btn-lg">LINE登録で無料参加する →</a>
+      <span class="tn-free-tag">登録無料・いつでも退会できます</span>
+    </div>
+  </div>
+</div>
+
+<!-- フッター -->
+<div class="tn-footer">
+  <p><a href="https://y-one.biz/">y-one.biz</a></p>
+  <p>&copy; 2024 ツギノテ作戦 All Rights Reserved.</p>
+</div>
+
+</div>
