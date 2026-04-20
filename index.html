@@ -12,17 +12,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --primary: #4A7FD4;
-      --primary-light: #EBF2FF;
+      --primary: #1AAECC;
+      --primary-dark: #1090AA;
+      --primary-light: #E6F7FB;
       --accent: #FF7043;
       --accent-light: #FFF3EF;
       --green: #43A882;
       --text: #2D2D2D;
       --text-light: #777;
-      --bg: #F9FAFB;
+      --bg: #F5FBFD;
       --white: #fff;
       --radius: 20px;
-      --shadow: 0 6px 28px rgba(74,127,212,0.12);
+      --shadow: 0 6px 28px rgba(26,174,204,0.14);
     }
 
     html { scroll-behavior: smooth; }
@@ -40,13 +41,11 @@
       z-index: 100;
       box-shadow: 0 2px 14px rgba(0,0,0,0.07);
     }
-    .logo {
-      font-family: 'M PLUS Rounded 1c', sans-serif;
-      font-weight: 800;
-      font-size: 1.15rem;
-      color: var(--primary);
+    .logo img {
+      height: 48px;
+      width: auto;
+      display: block;
     }
-    .logo em { color: var(--accent); font-style: normal; }
 
     /* BUTTONS */
     .btn {
@@ -67,7 +66,7 @@
 
     /* HERO */
     .hero {
-      background: linear-gradient(155deg, #EBF2FF 0%, #FFF3EF 100%);
+      background: linear-gradient(155deg, #E6F7FB 0%, #FFF3EF 100%);
       padding: 72px 24px 80px;
       text-align: center;
     }
@@ -247,7 +246,7 @@
     /* PRICING */
     .pricing { background: var(--white); }
     .pricing-box {
-      background: linear-gradient(135deg, var(--primary) 0%, #3162B8 100%);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       border-radius: 28px;
       padding: 48px 40px;
       color: var(--white);
@@ -334,7 +333,7 @@
 
     /* FINAL CTA */
     .final-cta {
-      background: linear-gradient(155deg, #EBF2FF 0%, #FFF3EF 100%);
+      background: linear-gradient(155deg, #E6F7FB 0%, #FFF3EF 100%);
       text-align: center;
       padding: 80px 24px;
     }
@@ -375,7 +374,9 @@
 
 <!-- HEADER -->
 <header>
-  <div class="logo">ツギノテ<em>作戦</em></div>
+  <div class="logo">
+    <img src="logo.png" alt="ツギノテ作戦 | Online Web Marketing Academy" />
+  </div>
   <a href="#line" class="btn btn-sm">公式LINEはこちら →</a>
 </header>
 
