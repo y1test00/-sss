@@ -569,6 +569,205 @@
       border-bottom: 2px solid var(--green);
     }
 
+    /* ========== SERVICE SECTION ========== */
+    .service {
+      background: var(--white);
+    }
+
+    .service-lead {
+      font-size: 15px;
+      color: var(--text-light);
+      text-align: center;
+      line-height: 1.9;
+      margin-bottom: 44px;
+    }
+
+    .step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 44px;
+      position: relative;
+    }
+    .step-list::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 36px;
+      bottom: 36px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary-light), var(--green-light));
+    }
+
+    .step-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px 0;
+    }
+
+    .step-num-wrap {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(160,120,80,0.3);
+    }
+    .step-item:last-child .step-num {
+      background: linear-gradient(135deg, var(--green), #5A9470);
+    }
+
+    .step-body {
+      background: var(--bg);
+      border-radius: 14px;
+      padding: 18px 20px;
+      flex: 1;
+      margin-top: 4px;
+    }
+    .step-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .step-item:last-child .step-tag {
+      color: var(--green);
+      background: var(--green-light);
+    }
+    .step-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .step-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    .service-note-box {
+      background: var(--primary-light);
+      border-radius: 14px;
+      padding: 22px 20px;
+      text-align: center;
+    }
+    .service-note-box p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.85;
+    }
+    .service-note-box strong {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    /* ========== BENEFIT SECTION ========== */
+    .benefit {
+      background: linear-gradient(160deg, #F0F7F3 0%, #E8F5EE 60%, #EDF5F0 100%);
+    }
+
+    .benefit-lead {
+      font-size: 15px;
+      color: var(--text-light);
+      text-align: center;
+      line-height: 1.9;
+      margin-bottom: 40px;
+    }
+
+    .benefit-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .benefit-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 3px 14px rgba(123,174,139,0.12);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .benefit-icon-wrap {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .benefit-body {}
+    .benefit-before {
+      font-size: 11px;
+      color: #B09090;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+      text-decoration: line-through;
+    }
+    .benefit-after {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .benefit-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    .benefit-closing {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: 0 3px 14px rgba(123,174,139,0.12);
+    }
+    .benefit-closing-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(17px, 4.5vw, 21px);
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .benefit-closing-text em {
+      font-style: normal;
+      color: var(--green);
+    }
+    .benefit-closing-note {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.85;
+    }
+
     /* ========== FOOTER CTA STRIP ========== */
     .footer-cta-strip {
       background: var(--primary-light);
@@ -948,6 +1147,214 @@
       これは「自分を変える」のではなく、<br>
       <em>「自分を取り戻す」</em>プロセスです。
     </p>
+
+  </div>
+</section>
+
+
+<!-- ========== ⑤ SERVICE SECTION ========== -->
+<section class="service" id="service">
+  <div class="section-inner">
+
+    <p class="section-label">Service</p>
+    <h2 class="section-title">
+      ジブンリセットで<em>具体的にすること</em>
+    </h2>
+
+    <p class="service-lead">
+      「何をするのかわからない」という不安がないように、<br>
+      丁寧にお伝えします。<br>
+      押しつけや課題はなく、<strong>あなたのペースで進みます。</strong>
+    </p>
+
+    <div class="step-list">
+
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-num">1</div>
+        </div>
+        <div class="step-body">
+          <span class="step-tag">STEP 1</span>
+          <p class="step-title">まず、話を聞かせてください</p>
+          <p class="step-desc">
+            初回は「今、何がしんどいか」を自由に話すだけでOKです。
+            解決策の押しつけや、評価・ジャッジは一切しません。
+            ただ、丁寧に受け取ります。
+            話しながら、自然と頭の中が整理されていきます。
+          </p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-num">2</div>
+        </div>
+        <div class="step-body">
+          <span class="step-tag">STEP 2</span>
+          <p class="step-title">悩みの「構造」を一緒に整理する</p>
+          <p class="step-desc">
+            「何が本当の問題なのか」を、一緒に紐解いていきます。
+            人間関係の悩みは複数の要素が絡まっていることが多いので、
+            ひとつずつ丁寧にほぐして、見えやすくします。
+            「あ、そういうことか」という気づきが生まれる時間です。
+          </p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-num">3</div>
+        </div>
+        <div class="step-body">
+          <span class="step-tag">STEP 3</span>
+          <p class="step-title">考え方のクセを知り、軽くする</p>
+          <p class="step-desc">
+            「断ると嫌われる」「怒らせたら終わり」——
+            誰もが持っている無意識の思い込みを一緒に見つけます。
+            気づくだけで楽になることがほとんどです。
+            無理に変えようとせず、自然に緩めていくアプローチです。
+          </p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-num">4</div>
+        </div>
+        <div class="step-body">
+          <span class="step-tag">STEP 4</span>
+          <p class="step-title">距離感と伝え方を一緒に考える</p>
+          <p class="step-desc">
+            「どう距離を置けばいいか」「どう伝えれば関係を壊さずに済むか」——
+            具体的なシチュエーションをもとに、あなたに合った言葉を一緒に探します。
+            ロールプレイや文章の確認など、実践的なサポートも行います。
+          </p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-num">5</div>
+        </div>
+        <div class="step-body">
+          <span class="step-tag">STEP 5 ／ 継続サポート</span>
+          <p class="step-title">日常に戻った後も、一人にしない</p>
+          <p class="step-desc">
+            「あの後どうなったか」「また困ったことが起きた」——
+            そんな小さなことも気軽に話せる場所として、継続的にサポートします。
+            一度きりで終わらず、あなたのペースに寄り添い続けます。
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /step-list -->
+
+    <div class="service-note-box">
+      <p>
+        すべてオンライン（テキスト・音声・ビデオ）で対応しています。<br>
+        <strong>場所を選ばず、自分のペースで利用できます。</strong><br><br>
+        「何から話せばいいかわからない」という方も大丈夫です。<br>
+        最初の一言は「最近ちょっと疲れていて」でも十分です。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========== ⑥ BENEFIT SECTION ========== -->
+<section class="benefit" id="benefit">
+  <div class="section-inner">
+
+    <p class="section-label">Benefit</p>
+    <h2 class="section-title">
+      利用した方が感じた、<em>変化のこと</em>
+    </h2>
+
+    <p class="benefit-lead">
+      劇的に変わる、というより——<br>
+      <strong>毎日がじわじわと、軽くなっていく感覚</strong>です。
+    </p>
+
+    <div class="benefit-cards">
+
+      <div class="benefit-card">
+        <div class="benefit-icon-wrap">😮‍💨</div>
+        <div class="benefit-body">
+          <p class="benefit-before">以前：職場から帰るたびにぐったり</p>
+          <p class="benefit-after">会話の後に、消耗しなくなった</p>
+          <p class="benefit-desc">
+            顔色をうかがいながら話すのをやめたら、
+            会話のあとにどっと疲れることがなくなった。
+            帰り道が、ただの「移動」になった。
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon-wrap">💬</div>
+        <div class="benefit-body">
+          <p class="benefit-before">以前：言いたいことが言えずに後悔</p>
+          <p class="benefit-after">自分の気持ちを、言葉にできるようになった</p>
+          <p class="benefit-desc">
+            うまく言えなかった感情に名前がついて、
+            「こういうことが嫌だった」と自分でわかるようになった。
+            相手に伝えられなくても、自分がわかるだけで楽になる。
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon-wrap">🙅</div>
+        <div class="benefit-body">
+          <p class="benefit-before">以前：断れなくて、いつも引き受けすぎ</p>
+          <p class="benefit-after">「ごめんなさい」が、怖くなくなった</p>
+          <p class="benefit-desc">
+            断ることへの罪悪感が薄れた。
+            「嫌われるかも」より「自分はどうしたいか」を
+            先に考えられるようになった。
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon-wrap">🏠</div>
+        <div class="benefit-body">
+          <p class="benefit-before">以前：家にいても気が抜けなかった</p>
+          <p class="benefit-after">家が、ちゃんと休める場所になった</p>
+          <p class="benefit-desc">
+            身近な人との関係が少し変わって、
+            家にいるのが苦痛じゃなくなった。
+            「ただいま」と言える場所が戻ってきた感じがする。
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon-wrap">✨</div>
+        <div class="benefit-body">
+          <p class="benefit-before">以前：「自分がない」感じがしていた</p>
+          <p class="benefit-after">「自分はこれでいい」と思えるようになった</p>
+          <p class="benefit-desc">
+            誰かに合わせ続けてきた自分が、
+            少しずつ「自分らしさ」を取り戻していく感覚。
+            それが一番大きな変化だったかもしれない。
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /benefit-cards -->
+
+    <div class="benefit-closing">
+      <p class="benefit-closing-text">
+        変わるのは「あなた自身」ではなく、<br>
+        <em>「あなたと世界の関わり方」</em>です。
+      </p>
+      <p class="benefit-closing-note">
+        あなたはそのままで十分です。<br>
+        ただ、もう少しだけ——自分を大切にする方法を知るだけでいい。
+      </p>
+    </div>
 
   </div>
 </section>
