@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ジブンリセット｜人間関係の悩みを、自分を整えることで解決する</title>
+  <meta name="description" content="気を使いすぎて疲れていませんか？職場・家庭・友人関係の悩みを、自分を整えることで解決するオンラインサポート「ジブンリセット」。無料相談受付中。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #C9A98A;
+      --primary-light: #F7F0E8;
+      --primary-dark: #A07850;
+      --accent: #E8836A;
+      --accent-light: #FFF0EC;
+      --green: #7BAE8B;
+      --green-light: #EDF5F0;
+      --text: #3D3535;
+      --text-light: #7A6A6A;
+      --bg: #FDFAF7;
+      --white: #FFFFFF;
+      --line: #06C755;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: var(--white);
+      padding: 14px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header .logo {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--primary-dark);
+      letter-spacing: 0.1em;
+    }
+    .site-header .logo span {
+      font-size: 11px;
+      display: block;
+      color: var(--text-light);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+    }
+
+    /* ========== HERO / FIRST VIEW ========== */
+    .hero {
+      background: linear-gradient(160deg, #FDF6EE 0%, #F5EAE0 50%, #EDE0D4 100%);
+      padding: 60px 20px 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(201,169,138,0.12);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(123,174,139,0.10);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      letter-spacing: 0.08em;
+      border: 1px solid rgba(232,131,106,0.3);
+    }
+
+    /* キャッチコピー切り替えエリア */
+    .catch-area {
+      margin-bottom: 28px;
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .catchcopy {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      animation: fadeIn 0.8s ease;
+    }
+    .catchcopy.active { display: flex; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .catchcopy-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(22px, 6vw, 30px);
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+      letter-spacing: 0.03em;
+    }
+    .catchcopy-main em {
+      font-style: normal;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1px;
+    }
+
+    /* キャッチコピー切り替えドット */
+    .catch-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .catch-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(201,169,138,0.35);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .catch-dot.active { background: var(--primary); }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.9;
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-sub strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    /* CTA ボタン群 */
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 340px;
+      padding: 18px 24px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #E8836A, #D4614A);
+      color: var(--white);
+      box-shadow: 0 6px 20px rgba(232,131,106,0.45);
+    }
+    .btn-primary:hover { box-shadow: 0 8px 24px rgba(232,131,106,0.55); }
+
+    .btn-line {
+      background: var(--line);
+      color: var(--white);
+      box-shadow: 0 6px 20px rgba(6,199,85,0.35);
+    }
+    .btn-line:hover { box-shadow: 0 8px 24px rgba(6,199,85,0.45); }
+
+    .btn-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .cta-note {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    section {
+      padding: 64px 20px;
+    }
+    .section-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(20px, 5vw, 26px);
+      font-weight: 600;
+      color: var(--text);
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .section-title em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    /* ========== EMPATHY SECTION ========== */
+    .empathy {
+      background: var(--white);
+    }
+
+    .empathy-intro {
+      font-size: 15px;
+      color: var(--text-light);
+      text-align: center;
+      line-height: 1.9;
+      margin-bottom: 40px;
+    }
+
+    .worry-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .worry-card {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .worry-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .worry-content {}
+    .worry-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .worry-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    .empathy-mirror {
+      background: linear-gradient(135deg, #FDF0E8, #F5E8DC);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .empathy-mirror-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+      letter-spacing: 0.05em;
+    }
+    .empathy-mirror-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(17px, 4.5vw, 21px);
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .empathy-mirror-text em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .empathy-mirror-note {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* ========== FOOTER CTA STRIP ========== */
+    .footer-cta-strip {
+      background: var(--primary-light);
+      padding: 32px 20px;
+      text-align: center;
+    }
+    .footer-cta-strip p {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (min-width: 600px) {
+      .hero { padding: 80px 40px 90px; }
+      section { padding: 80px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="logo">
+    ジブンリセット
+    <span>人間関係の悩みを、自分を整えることで解決する</span>
+  </div>
+</header>
+
+
+<!-- ========== ① FIRST VIEW ========== -->
+<section class="hero">
+
+  <div class="hero-badge">✦ 無料相談受付中 ✦</div>
+
+  <!-- キャッチコピー3パターン（自動切り替え） -->
+  <div class="catch-area">
+
+    <div class="catchcopy active" id="catch-0">
+      <p class="catchcopy-main">
+        気を使い続けて、<br>
+        <em>ふと気づいたら</em>自分がない。
+      </p>
+    </div>
+
+    <div class="catchcopy" id="catch-1">
+      <p class="catchcopy-main">
+        悪いのは相手じゃない。<br>
+        でも、<em>自分を責めるのも違う。</em>
+      </p>
+    </div>
+
+    <div class="catchcopy" id="catch-2">
+      <p class="catchcopy-main">
+        「また我慢した」が<br>
+        <em>続くのは、やり方</em>のせいかも。
+      </p>
+    </div>
+
+  </div>
+
+  <!-- 切り替えドット -->
+  <div class="catch-dots">
+    <div class="catch-dot active" onclick="showCatch(0)"></div>
+    <div class="catch-dot" onclick="showCatch(1)"></div>
+    <div class="catch-dot" onclick="showCatch(2)"></div>
+  </div>
+
+  <!-- サブコピー -->
+  <p class="hero-sub">
+    職場でも、家でも、友人関係でも——<br>
+    なんとなく<strong>居心地が悪い</strong>と感じているあなたへ。<br><br>
+    人間関係の悩みは、相手を変えなくても<br>
+    <strong>「自分を整える」だけで、驚くほど楽になります。</strong>
+  </p>
+
+  <!-- CTA -->
+  <div class="cta-group">
+    <a href="#consultation" class="btn btn-primary">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      まず無料で相談してみる
+    </a>
+    <a href="#line" class="btn btn-line">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 5.92 2 10.72c0 2.94 1.6 5.54 4.06 7.24l-.56 2.1 2.4-1.26c.98.26 2.02.4 3.1.4 5.52 0 10-3.92 10-8.72S17.52 2 12 2z"/>
+      </svg>
+      LINEで気軽に話しかける
+    </a>
+    <p class="cta-note">費用・勧誘・プレッシャーは一切ありません</p>
+  </div>
+
+</section>
+
+
+<!-- ========== ② EMPATHY SECTION ========== -->
+<section class="empathy">
+  <div class="section-inner">
+
+    <p class="section-label">Empathy</p>
+    <h2 class="section-title">
+      こんなこと、<em>ありませんか？</em>
+    </h2>
+
+    <p class="empathy-intro">
+      「自分だけがこんなに悩んでいるのかな」と<br>
+      思っていませんか？<br>
+      でも、同じ気持ちを抱えている人は、<strong>とても多い</strong>のです。
+    </p>
+
+    <div class="worry-list">
+
+      <div class="worry-card">
+        <div class="worry-icon">😔</div>
+        <div class="worry-content">
+          <p class="worry-title">職場で本音が言えない</p>
+          <p class="worry-desc">
+            「また変に思われるかも」「空気を壊したくない」——
+            毎日ちょっとずつ我慢が積み重なって、帰り道に
+            ドッと疲れを感じる。
+          </p>
+        </div>
+      </div>
+
+      <div class="worry-card">
+        <div class="worry-icon">😟</div>
+        <div class="worry-content">
+          <p class="worry-title">気を使いすぎて消耗している</p>
+          <p class="worry-desc">
+            相手の顔色を読んで、言葉を選んで、機嫌を取って。
+            気づいたら自分のことを後回しにしてばかりで、
+            「私はどうしたいんだっけ？」と分からなくなる。
+          </p>
+        </div>
+      </div>
+
+      <div class="worry-card">
+        <div class="worry-icon">😞</div>
+        <div class="worry-content">
+          <p class="worry-title">家庭や身近な人との関係がしんどい</p>
+          <p class="worry-desc">
+            一番近いはずの人との会話がギクシャクする。
+            言い方が悪かったかな、機嫌を損ねたかな——と
+            家にいても気が抜けない。
+          </p>
+        </div>
+      </div>
+
+      <div class="worry-card">
+        <div class="worry-icon">🙁</div>
+        <div class="worry-content">
+          <p class="worry-title">「いい人」のせいで損している気がする</p>
+          <p class="worry-desc">
+            頼まれると断れない。嫌なことも笑って流してしまう。
+            「優しいね」と言われるたびに、なぜか少し虚しくなる。
+          </p>
+        </div>
+      </div>
+
+      <div class="worry-card">
+        <div class="worry-icon">😩</div>
+        <div class="worry-content">
+          <p class="worry-title">一人で抱え込んで、出口が見えない</p>
+          <p class="worry-desc">
+            誰かに話したい気持ちはあるけど、
+            「こんなこと相談していいのかな」「迷惑かな」と
+            思うと言い出せなくて、ひとりで解決しようとしてしまう。
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /worry-list -->
+
+    <!-- 共感のまとめ -->
+    <div class="empathy-mirror">
+      <p class="empathy-mirror-title">— あなたへのメッセージ —</p>
+      <p class="empathy-mirror-text">
+        それは、あなたが<em>弱いからじゃない。</em><br>
+        ただ、<em>誰も教えてくれなかった</em><br>
+        「人との関わり方」を<br>
+        知らなかっただけです。
+      </p>
+      <p class="empathy-mirror-note">
+        我慢や頑張りはもう十分しています。<br>
+        ここからは、<strong>やり方を変えるだけでいい</strong>のです。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========== FLOATING CTA STRIP ========== -->
+<div class="footer-cta-strip">
+  <p>続きが気になる方は、まず気軽に話しかけてみてください。<br>費用も勧誘も、一切ありません。</p>
+  <div class="cta-group">
+    <a href="#consultation" class="btn btn-primary">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      無料相談を申し込む
+    </a>
+    <a href="#line" class="btn btn-line">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 5.92 2 10.72c0 2.94 1.6 5.54 4.06 7.24l-.56 2.1 2.4-1.26c.98.26 2.02.4 3.1.4 5.52 0 10-3.92 10-8.72S17.52 2 12 2z"/>
+      </svg>
+      LINEで登録する
+    </a>
+  </div>
+</div>
+
+
+<script>
+  // キャッチコピー自動切り替え
+  let currentCatch = 0;
+  const catchCount = 3;
+
+  function showCatch(index) {
+    document.querySelectorAll('.catchcopy').forEach((el, i) => {
+      el.classList.toggle('active', i === index);
+    });
+    document.querySelectorAll('.catch-dot').forEach((el, i) => {
+      el.classList.toggle('active', i === index);
+    });
+    currentCatch = index;
+  }
+
+  setInterval(() => {
+    showCatch((currentCatch + 1) % catchCount);
+  }, 3500);
+</script>
+
+</body>
+</html>
