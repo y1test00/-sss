@@ -768,6 +768,218 @@
       line-height: 1.85;
     }
 
+    /* ========== VOICE SECTION ========== */
+    .voice {
+      background: var(--bg);
+    }
+
+    .voice-lead {
+      font-size: 15px;
+      color: var(--text-light);
+      text-align: center;
+      line-height: 1.9;
+      margin-bottom: 40px;
+    }
+
+    .voice-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .voice-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+      position: relative;
+    }
+    .voice-card::before {
+      content: '\201C';
+      position: absolute;
+      top: 12px;
+      left: 18px;
+      font-size: 48px;
+      font-family: Georgia, serif;
+      color: var(--primary-light);
+      line-height: 1;
+    }
+
+    .voice-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-top: 8px;
+    }
+    .voice-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .voice-meta {}
+    .voice-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .voice-attr {
+      font-size: 11px;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+    .voice-stars {
+      color: #F5A623;
+      font-size: 13px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .voice-before-after {
+      background: var(--primary-light);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      font-size: 12px;
+    }
+    .voice-before-after .before {
+      color: #B09090;
+      text-decoration: line-through;
+      flex: 1;
+    }
+    .voice-before-after .arrow {
+      color: var(--primary);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .voice-before-after .after {
+      color: var(--primary-dark);
+      font-weight: 700;
+      flex: 1;
+      text-align: right;
+    }
+
+    .voice-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.85;
+    }
+
+    .voice-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 8px;
+    }
+
+    /* ========== DIFF SECTION ========== */
+    .diff {
+      background: var(--white);
+    }
+
+    .diff-lead {
+      font-size: 15px;
+      color: var(--text-light);
+      text-align: center;
+      line-height: 1.9;
+      margin-bottom: 40px;
+    }
+
+    .diff-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 36px;
+      border-radius: 14px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    }
+    .diff-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+    .diff-table th {
+      padding: 14px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+    .diff-table th.th-item { background: var(--bg); color: var(--text-light); text-align: left; }
+    .diff-table th.th-others { background: #F5EDED; color: #9A7070; }
+    .diff-table th.th-us {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+    }
+    .diff-table td {
+      padding: 14px 12px;
+      border-top: 1px solid #F0E8E0;
+      vertical-align: middle;
+    }
+    .diff-table td:first-child {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 13px;
+      background: var(--bg);
+    }
+    .diff-table td.td-others {
+      text-align: center;
+      color: #B09090;
+      background: #FDF8F8;
+    }
+    .diff-table td.td-us {
+      text-align: center;
+      color: var(--primary-dark);
+      font-weight: 700;
+      background: var(--primary-light);
+    }
+    .check { color: var(--green); font-size: 16px; }
+    .cross { color: #CDB0B0; font-size: 16px; }
+    .triangle { color: #E8C08A; font-size: 14px; }
+
+    .diff-points {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .diff-point {
+      background: var(--primary-light);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .diff-point-icon {
+      flex-shrink: 0;
+      font-size: 22px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .diff-point-body {}
+    .diff-point-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .diff-point-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
     /* ========== FOOTER CTA STRIP ========== */
     .footer-cta-strip {
       background: var(--primary-light);
@@ -1354,6 +1566,215 @@
         あなたはそのままで十分です。<br>
         ただ、もう少しだけ——自分を大切にする方法を知るだけでいい。
       </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========== ⑦ VOICE SECTION ========== -->
+<section class="voice" id="voice">
+  <div class="section-inner">
+
+    <p class="section-label">Voice</p>
+    <h2 class="section-title">
+      利用された方の<em>リアルな声</em>
+    </h2>
+
+    <p class="voice-lead">
+      特別な人だけが変われたわけではありません。<br>
+      みなさん、最初は「本当に変われるのかな」と<br>
+      半信半疑だったそうです。
+    </p>
+
+    <div class="voice-cards">
+
+      <!-- 声①：職場の人間関係 -->
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-avatar">🌸</div>
+          <div class="voice-meta">
+            <p class="voice-name">30代・女性（会社員）</p>
+            <p class="voice-attr">職場の人間関係に悩んでいた</p>
+          </div>
+          <p class="voice-stars">★★★★★</p>
+        </div>
+        <div class="voice-before-after">
+          <span class="before">毎日怖くて会社に行けない</span>
+          <span class="arrow">→</span>
+          <span class="after">苦手な上司と普通に話せた</span>
+        </div>
+        <p class="voice-text">
+          職場に苦手な上司がいて、会議のたびに胃が痛くなっていました。
+          「また何か言われたら」と怯えて、毎朝布団から出るのが辛かったです。<br><br>
+          ジブンリセットでは、私が何を怖れているのかを一緒に整理してくれました。
+          「評価されることへの不安」だとわかったとき、なんだかスーッと楽になって。
+          上司の言葉に反応しなくなってから、自分が落ち着いてきたのを感じています。
+        </p>
+      </div>
+
+      <!-- 声②：家庭の人間関係 -->
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-avatar">🌿</div>
+          <div class="voice-meta">
+            <p class="voice-name">40代・女性（主婦）</p>
+            <p class="voice-attr">夫・義家族との関係に悩んでいた</p>
+          </div>
+          <p class="voice-stars">★★★★★</p>
+        </div>
+        <div class="voice-before-after">
+          <span class="before">家族に本音が言えず息が詰まる</span>
+          <span class="arrow">→</span>
+          <span class="after">「嫌だ」と言えた日があった</span>
+        </div>
+        <p class="voice-text">
+          長年、家族に「嫌だ」と言えたことがありませんでした。
+          笑って流してきたことで、自分の気持ちがどこかに消えてしまった感じがしていました。<br><br>
+          サポートを受ける中で、「断っても関係は壊れない」ということが少しずつ実感できて。
+          先日、夫に初めて「それは私には無理」と言えました。
+          小さなことですが、自分にとってはすごく大きな一歩でした。
+        </p>
+      </div>
+
+      <!-- 声③：友人関係・自己肯定感 -->
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-avatar">🌼</div>
+          <div class="voice-meta">
+            <p class="voice-name">20代・女性（フリーランス）</p>
+            <p class="voice-attr">友人関係で消耗しやすかった</p>
+          </div>
+          <p class="voice-stars">★★★★★</p>
+        </div>
+        <div class="voice-before-after">
+          <span class="before">友人に振り回されてぐったり</span>
+          <span class="arrow">→</span>
+          <span class="after">自分のペースを守れるようになった</span>
+        </div>
+        <p class="voice-text">
+          友人のグループLINEを見るたびに憂うつでした。
+          誘われたら断れなくて、行くたびに消耗して帰ってくる繰り返し。<br><br>
+          「なぜ断れないのか」を紐解いていくと、「嫌われるより自分がしんどい方がマシ」と
+          思い込んでいたことに気づきました。
+          今は断る回数が増えて、その分、本当に行きたい時間が楽しめています。
+        </p>
+      </div>
+
+    </div><!-- /voice-cards -->
+
+    <p class="voice-note">※ プライバシー保護のため、内容の一部を変更しています。</p>
+
+  </div>
+</section>
+
+
+<!-- ========== ⑧ DIFF SECTION ========== -->
+<section class="diff" id="diff">
+  <div class="section-inner">
+
+    <p class="section-label">Why Us</p>
+    <h2 class="section-title">
+      他のサービスと<em>何が違うのか</em>
+    </h2>
+
+    <p class="diff-lead">
+      「カウンセリングとは違うの？」<br>
+      「コーチングとは？」<br>
+      そんな疑問に、正直にお答えします。
+    </p>
+
+    <!-- 比較表 -->
+    <div class="diff-table-wrap">
+      <table class="diff-table">
+        <thead>
+          <tr>
+            <th class="th-item">比較ポイント</th>
+            <th class="th-others">一般的な<br>カウンセリング等</th>
+            <th class="th-us">ジブン<br>リセット</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>気軽に話せる</td>
+            <td class="td-others"><span class="triangle">△</span><br><span style="font-size:11px">敷居が高い</span></td>
+            <td class="td-us"><span class="check">✓</span><br><span style="font-size:11px">LINEでOK</span></td>
+          </tr>
+          <tr>
+            <td>費用の負担</td>
+            <td class="td-others"><span class="cross">✗</span><br><span style="font-size:11px">高額になりがち</span></td>
+            <td class="td-us"><span class="check">✓</span><br><span style="font-size:11px">まず無料から</span></td>
+          </tr>
+          <tr>
+            <td>具体的な伝え方を<br>一緒に考える</td>
+            <td class="td-others"><span class="cross">✗</span><br><span style="font-size:11px">聞くだけが多い</span></td>
+            <td class="td-us"><span class="check">✓</span><br><span style="font-size:11px">実践サポートあり</span></td>
+          </tr>
+          <tr>
+            <td>スピリチュアルに<br>寄らない</td>
+            <td class="td-others"><span class="triangle">△</span><br><span style="font-size:11px">サービスによる</span></td>
+            <td class="td-us"><span class="check">✓</span><br><span style="font-size:11px">論理と感情の<br>バランス重視</span></td>
+          </tr>
+          <tr>
+            <td>日常の中で<br>継続サポート</td>
+            <td class="td-others"><span class="cross">✗</span><br><span style="font-size:11px">セッション内のみ</span></td>
+            <td class="td-us"><span class="check">✓</span><br><span style="font-size:11px">日常に寄り添う</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 差別化ポイント詳細 -->
+    <div class="diff-points">
+
+      <div class="diff-point">
+        <div class="diff-point-icon">💭</div>
+        <div class="diff-point-body">
+          <p class="diff-point-title">「聞くだけ」で終わらない</p>
+          <p class="diff-point-desc">
+            多くのカウンセリングは「話を聞いてもらう」場です。
+            ジブンリセットでは、気持ちの整理に加えて
+            「では、実際どう動くか」まで一緒に考えます。
+          </p>
+        </div>
+      </div>
+
+      <div class="diff-point">
+        <div class="diff-point-icon">📱</div>
+        <div class="diff-point-body">
+          <p class="diff-point-title">LINEで気軽に、好きな時間に</p>
+          <p class="diff-point-desc">
+            予約して、時間を作って、緊張しながら話す——その手間がありません。
+            思ったときにテキストで送るだけ。
+            日常に溶け込んだサポートだから、続けやすいのです。
+          </p>
+        </div>
+      </div>
+
+      <div class="diff-point">
+        <div class="diff-point-icon">⚖️</div>
+        <div class="diff-point-body">
+          <p class="diff-point-title">怪しくない。スピリチュアルに寄らない</p>
+          <p class="diff-point-desc">
+            「引き寄せ」「波動」「前世」——そういった概念は使いません。
+            感情と論理のバランスを大切にした、地に足のついたアプローチです。
+            「なんか怪しい」と感じたことがある方にこそ、試してほしいサービスです。
+          </p>
+        </div>
+      </div>
+
+      <div class="diff-point">
+        <div class="diff-point-icon">🤝</div>
+        <div class="diff-point-body">
+          <p class="diff-point-title">上から目線なし。答えを押しつけない</p>
+          <p class="diff-point-desc">
+            「こうすべき」「それは違います」という指導はしません。
+            あなたの中にある答えを、一緒に探す関わり方を大切にしています。
+            決めるのは、いつもあなた自身です。
+          </p>
+        </div>
+      </div>
+
     </div>
 
   </div>
